@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Tristan Leroy</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+	/*
+:root -> All Variable for the resume
+*/
+:root {
+
+	--gray-100: #f8f9fa;
+	--gray-200: #e9ecef;
+	--gray-300: #dee2e6;
+	--gray-400: #ced4da;
+	--gray-500: #adb5bd;
+	--gray-600: #6c757d;
+	--gray-700: #495057;
+	--gray-750: #3f454c;
+	--gray-800: #343a40;
+	--gray-900: #212529;
+
+	--dark: var(--gray-800);
+	--light: #dbdbdb;
+	--red: #dc3545;
+	--light-grey: var(--gray-500);
+
+	--main-background: var(--dark);
+	--secondary-background: var(--red);
+
+	--main-text-color: var(--light);
+	--secondary-text-color: var(--dark);
+	--red-text-color: var(--red);
+}
+body {
+	background: var(--main-background);
+	font: 15px Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+}
+em {
+	color: var(--light-grey);
+}
+.side em {
+	color: black;
+}
+p {
+	line-height: 1.4;
+}
+ul {
+	margin-bottom: 0;
+}
+section {
+	margin-bottom: 1em;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+/*
+.side -> Left side bar with the personal information, skills, and profiles 
+*/
+.side {
+	min-width: 20rem;
+	width: 15%;
+	min-height: 100vh;
+	padding-left: 0.5rem;
+	background-color: var(--secondary-background);
+	color: var(--secondary-text-color);
+}
+.side h1, .side h2, .side h3 {
+	margin-left: -0.5rem;
+	text-align: center;
+}
+.side a{
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+/*
+.body -> Right side with all the informations for the works, projects...
+*/
+.body {
+	width: 85%;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	background-color: var(--main-background);
+	color: var(--main-text-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.body a{
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+/*
+.col1 -> First column for the flex of the body
+.col2 -> Second column for the flex
+*/
+.col1 {
+	width: 54%;
+}
+.col2 {
+	width: 44%;
+}
+
+.item {
+	margin-bottom: 0.4em;
+}
+#resume {
+	display: inline-flex;
+}
+#basics {
+	margin-bottom: -10px;
+}
+#basics h3 {
+	margin-top: 0.5em;
+}
+#basics .contact strong,
+#location strong {
+	clear: both;
+	float: left;
+	line-height: 1.3;
+	width: 120px;
+}
+#profiles,
+#skills {
+	overflow: hidden;
+}
+#skills{
+	margin-top: -3.5rem;
+}
+#languages {
+	margin-top: -2rem;
+} 
+#profiles .item,
+#skills .item {
+	float: left;
+	width: 50%;
+}
+#profiles .item {
+	margin-top: -0.5rem;
+}
+#skills .item {
+	margin-top: -0.9rem;
+}
+.list-group-item{
+	background-color: var(--main-background);
+	border-color: var(--light-grey);
+	padding: 1%;
+}
+.highlights {
+	margin-top: 0.5rem;
+	padding-left: 0;
+}
+/*
+.dot -> Create dot for the skills count
+.leveln -> Color the dot for the correct level
+*/
+.dot {
+	height: 10px;
+	width: 10px;
+	background-color: var(--light-grey);
+	border-radius: 50%;
+	display: inline-block;
+}
+.level1 .dot:nth-child(-n+1) {
+	background-color: var(--dark);
+}
+.level2 .dot:nth-child(-n+2) {
+	background-color: var(--dark);
+}
+.level3 .dot:nth-child(-n+3) {
+	background-color: var(--dark);
+}
+.level4 .dot:nth-child(-n+4) {
+	background-color: var(--dark);
+}
+.level5 .dot:nth-child(-n+5) {
+	background-color: var(--dark);
+}
+
+#education .item {
+	display: flex;
+}
+
+
+#education .border {
+  width: 7.3rem;
+  line-height: 1.6;
+  font-weight: 700;
+  display: inline-block;
+  border-right: 3px solid var(--red);
+}
+#education .date {
+	width: 7rem;
+	line-height: 1.6;
+	font-weight: 700;
+	display: inline-block;
+  }
+
+#education .content {
+	margin-left: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#project .roles {
+	text-align: center;
+}
+#project .badge {
+	margin-bottom: 6px;
+}
+
+#volunteer .details,
+#project .details,
+#work .details {
+	text-align: center;
+	margin-left: 3%;
+	width: 95%;
+	margin-bottom: 10px;
+	background: var(--gray-700);
+	border-bottom: 1px solid var(--gray-400);
+	border-right: 1px solid var(--gray-400);
+	border-radius: 10px;
+}
+#volunteer .company,
+#project .company,
+#work .company {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#volunteer .date,
+#project .date,
+#work .date {
+	opacity: 0.7;
+}
+#volunteer .content,
+#work .content {
+	margin-left: 5rem;
+}
+#volunteer .position,
+#work .position {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+}
+	</style>
+	
+	</head>
+	<body>
+	
+	<div id="resume">
+
+		<div class="side">
+			<h1>Tristan Leroy</h1>
+			<h2></h2>
+			<section id="basics">
+				<div class="contact">
+				<div class="website">
+					<strong>Portfolio</strong>
+					<br/>
+					<a href=https://tristan.leroy.fr>https://tristan.leroy.fr</a>
+				</div>
+				<div class="email">
+					<strong>Email</strong>
+					<br/>
+					tristanleroy26@gmail.com
+				</div>
+				<div class="phone">
+					<strong>Telephone</strong>
+					<br/>
+					+33 644044210
+				</div>
+		
+				</div>
+					<div class="sector">
+						<strong>Secteur</strong>
+						<br>
+						Haut-de-France
+					</div>
+				<h3>Profiles</h3>
+				<section id="profiles">
+					<div class="item">
+						<strong class="network">
+							<i class="fa fa-twitter"></i>
+							Twitter
+						</strong>
+						<div class="username">
+							<a href="https://twitter.com/redbow26">redbow26</a>
+						</div>
+					</div>
+					<div class="item">
+						<strong class="network">
+							<i class="fa fa-github"></i>
+							Github
+						</strong>
+						<div class="username">
+							<a href="https://github.com/redbow26">redbow26</a>
+						</div>
+					</div>
+				</section>
+			</section>
+		<section id="skills">
+			<h2>Compétence</h2>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level1">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level2">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level3">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level4">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level5">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					HTML/CSS
+				</div>
+				<div class="level5">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span> 
+					<span class="dot"></span> 
+				</div>
+			</div>
+		</section>
+		<section id="languages">
+			<h2>Langues</h2>
+			<div class="item">
+				<div class="language">
+					Français
+				</div>
+				<div class="fluency">
+					<em>Langue natale</em>
+				</div>
+			</div>
+			<div class="item">
+				<div class="language">
+					Anglais
+				</div>
+				<div class="fluency">
+					<em>Bonne maitrise</em>
+				</div>
+			</div>
+		</section>
+		</div>
+		<div class="body">
+			<div class="col1">
+			
+			<section id="work">
+				<h2>Experience</h2>
+				<div class="item">
+					<div class="details">
+						<h3 class="company">
+							Startup Hubs
+						</h3>
+						<div class="date">
+							<span class="startDate">
+								Decembre 2015
+							</span>
+							<span class="endDate">
+								- Present
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="position">
+							<em>Lead Developer</em>
+						</div>
+						<div class="summary">
+							<p>Description</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="volunteer">
+				<h2>Volontariat</h2>
+				<div class="item">
+					<div class="details">
+						<h3 class="company">
+							Coding Party
+						</h3>
+						<div class="date">
+							<span class="startDate">
+								Août 2020
+							</span>
+							<span class="endDate">
+								- Maintenant
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="position">
+							<em>Fondateur</em>
+						</div>
+						<div class="summary">
+							<p>Création d&#x27;un concours python pour les première année de DUT informatique</p>
+						</div>
+						<ul class="highlights">
+							<li class="list-group-item">Création d'une application permettant de verifier les réponse des étudiants</li>
+							<li class="list-group-item">Rédaction de questions pour le concours</li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<div class="details">
+						<h3 class="company">
+							Lycée Pablo Picasso Avion
+						</h3>
+						<div class="date">
+							<span class="startDate">
+								Août 2019
+							</span>
+							<span class="endDate">
+								- Juin 2020
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="position">
+							<em>Intervant</em>
+						</div>
+						<div class="summary">
+							<p>Professeur volontaire de python au lycée Pablo Picasso à Avion</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="education">
+				<h2>Éducation</h2>
+				<div class="item">
+					<div class="border">
+						<div class="date">
+							<span class="startDate">
+								Août 2019
+							</span>
+							<span class="endDate">
+								- Juillet 2021
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="institution">
+							<em>IUT de Lens</em>
+						</div>
+						<div class="area">
+							Informatique
+						</div>
+						<div class="studyType">
+							DUT Informatique
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="border">
+						<div class="date">
+							<span class="startDate">
+								Août 2015
+							</span>
+							<span class="endDate">
+								- Juillet 2019
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="institution">
+							<em>Lycée Pablo Picasso à Avion</em>
+						</div>
+						<div class="area">
+							Général Scientifique
+						</div>
+						<div class="studyType">
+							Baccalauréat
+						</div>
+					</div>
+				</div>
+			</section>
+			</div>
+			<div class="col2">
+			<section id="project">
+				<h2>Projet</h2>
+				<div class="item">
+					<div class="details">
+						<h3 class="name">
+								<a href="https://missdirection.example.com"><span class="fa fa-github"></span></a>
+							Miss Direction
+						</h3>
+						<div class="date">
+							<span class="startDate">
+								Août 2016
+							</span>
+							<span class="endDate">
+								- Août 2016
+							</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="summary">
+							<p>A mapping engine that misguides you</p>
+						</div>
+						<div class="roles">
+							<span class="badge">Team lead</span>
+							<span class="badge">Designer</span>
+						</div>
+						<ul class="highlights">
+							<li class="list-group-item">Won award at AIHacks 2016</li>
+							<li class="list-group-item">Built by all women team of newbie programmers</li>
+							<li class="list-group-item">Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			</div>
+		</div>
+	</body>
+</html>

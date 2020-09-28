@@ -1,0 +1,52 @@
+{{#if resume.education.length}}
+<section id="education">
+	<h2>Éducation</h2>
+	{{#each resume.education}}
+	<div class="item">
+		<div class="border">
+			<div class="date">
+				{{#if startDateYear}}
+				<span class="startDate">
+					{{startDateMonth}}{{startDateYear}}
+				</span>
+				{{/if}}
+				{{#if endDateYear}}
+				<span class="endDate">
+					- {{endDateMonth}}{{endDateYear}}
+				</span>
+				{{/if}}
+			</div>
+		</div>
+		<div class="content">
+			{{#if institution}}
+			<div class="institution">
+				<em>{{institution}}</em>
+			</div>
+			{{/if}}
+			{{#if area}}
+			<div class="area">
+				{{area}}
+			</div>
+			{{/if}}
+			{{#if studyType}}
+			<div class="studyType">
+				{{studyType}}
+			</div>
+			{{/if}}
+			{{#if gpa}}
+			<div class="gpa">
+				GPA: {{gpa}}
+			</div>
+			{{/if}}
+			{{#if courses.length}}
+			<ul class="courses">
+				{{#each courses}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+	</div>
+	{{/each}}
+</section>
+{{/if}}

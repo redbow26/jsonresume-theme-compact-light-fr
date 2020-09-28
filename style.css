@@ -1,0 +1,245 @@
+/*
+:root -> All Variable for the resume
+*/
+:root {
+
+	--gray-100: #f8f9fa;
+	--gray-200: #e9ecef;
+	--gray-300: #dee2e6;
+	--gray-400: #ced4da;
+	--gray-500: #adb5bd;
+	--gray-600: #6c757d;
+	--gray-700: #495057;
+	--gray-750: #3f454c;
+	--gray-800: #343a40;
+	--gray-900: #212529;
+
+	--dark: var(--gray-800);
+	--light: #dbdbdb;
+	--red: #dc3545;
+	--light-grey: var(--gray-500);
+
+	--main-background: var(--dark);
+	--secondary-background: var(--red);
+
+	--main-text-color: var(--light);
+	--secondary-text-color: var(--dark);
+	--red-text-color: var(--red);
+}
+body {
+	background: var(--main-background);
+	font: 15px Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+}
+em {
+	color: var(--light-grey);
+}
+.side em {
+	color: black;
+}
+p {
+	line-height: 1.4;
+}
+ul {
+	margin-bottom: 0;
+}
+section {
+	margin-bottom: 1em;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+/*
+.side -> Left side bar with the personal information, skills, and profiles 
+*/
+.side {
+	min-width: 20rem;
+	width: 15%;
+	min-height: 100vh;
+	padding-left: 0.5rem;
+	background-color: var(--secondary-background);
+	color: var(--secondary-text-color);
+}
+.side h1, .side h2, .side h3 {
+	margin-left: -0.5rem;
+	text-align: center;
+}
+.side a{
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+/*
+.body -> Right side with all the informations for the works, projects...
+*/
+.body {
+	width: 85%;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	background-color: var(--main-background);
+	color: var(--main-text-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.body a{
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+/*
+.col1 -> First column for the flex of the body
+.col2 -> Second column for the flex
+*/
+.col1 {
+	width: 54%;
+}
+.col2 {
+	width: 44%;
+}
+
+.item {
+	margin-bottom: 0.4em;
+}
+#resume {
+	display: inline-flex;
+}
+#basics {
+	margin-bottom: -10px;
+}
+#basics h3 {
+	margin-top: 0.5em;
+}
+#basics .contact strong,
+#location strong {
+	clear: both;
+	float: left;
+	line-height: 1.3;
+	width: 120px;
+}
+#profiles,
+#skills {
+	overflow: hidden;
+}
+#skills{
+	margin-top: -3.5rem;
+}
+#languages {
+	margin-top: -2rem;
+} 
+#profiles .item,
+#skills .item {
+	float: left;
+	width: 50%;
+}
+#profiles .item {
+	margin-top: -0.5rem;
+}
+#skills .item {
+	margin-top: -0.9rem;
+}
+.list-group-item{
+	background-color: var(--main-background);
+	border-color: var(--light-grey);
+	padding: 1%;
+}
+.highlights {
+	margin-top: 0.5rem;
+	padding-left: 0;
+}
+/*
+.dot -> Create dot for the skills count
+.leveln -> Color the dot for the correct level
+*/
+.dot {
+	height: 10px;
+	width: 10px;
+	background-color: var(--light-grey);
+	border-radius: 50%;
+	display: inline-block;
+}
+.level1 .dot:nth-child(-n+1) {
+	background-color: var(--dark);
+}
+.level2 .dot:nth-child(-n+2) {
+	background-color: var(--dark);
+}
+.level3 .dot:nth-child(-n+3) {
+	background-color: var(--dark);
+}
+.level4 .dot:nth-child(-n+4) {
+	background-color: var(--dark);
+}
+.level5 .dot:nth-child(-n+5) {
+	background-color: var(--dark);
+}
+
+#education .item {
+	display: flex;
+}
+
+
+#education .border {
+  width: 7.3rem;
+  line-height: 1.6;
+  font-weight: 700;
+  display: inline-block;
+  border-right: 3px solid var(--red);
+}
+#education .date {
+	width: 7rem;
+	line-height: 1.6;
+	font-weight: 700;
+	display: inline-block;
+  }
+
+#education .content {
+	margin-left: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#project .roles {
+	text-align: center;
+}
+#project .badge {
+	margin-bottom: 6px;
+}
+
+#volunteer .details,
+#project .details,
+#work .details {
+	text-align: center;
+	margin-left: 3%;
+	width: 95%;
+	margin-bottom: 10px;
+	background: var(--gray-700);
+	border-bottom: 1px solid var(--gray-400);
+	border-right: 1px solid var(--gray-400);
+	border-radius: 10px;
+}
+#volunteer .company,
+#project .company,
+#work .company {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#volunteer .date,
+#project .date,
+#work .date {
+	opacity: 0.7;
+}
+#volunteer .content,
+#work .content {
+	margin-left: 5rem;
+}
+#volunteer .position,
+#work .position {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+}

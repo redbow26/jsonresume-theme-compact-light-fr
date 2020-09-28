@@ -1,0 +1,52 @@
+{{#if resume.projects.length}}
+<section id="project">
+	<h2>Projet</h2>
+	{{#each resume.projects}}
+	<div class="item">
+		<div class="details">
+			{{#if name}}
+			<h3 class="name">
+				{{#if url}}
+					<a href="{{url}}"><span class="fa fa-github"></span></a>
+				{{/if}}
+				{{name}}
+			</h3>
+			{{/if}}
+			<div class="date">
+				{{#if startDateYear}}
+				<span class="startDate">
+					{{startDateMonth}}{{startDateYear}}
+				</span>
+				{{/if}}
+				{{#if endDateYear}}
+				<span class="endDate">
+					- {{endDateMonth}}{{endDateYear}}
+				</span>
+				{{/if}}
+			</div>
+		</div>
+		<div class="content">
+			{{#if description}}
+			<div class="summary">
+				<p>{{description}}</p>
+			</div>
+			{{/if}}
+			{{#if roles.length}}
+			<div class="roles">
+				{{#each roles}}
+				<span class="badge">{{.}}</span>
+				{{/each}}
+			</div>
+			{{/if}}
+			{{#if highlights.length}}
+			<ul class="highlights">
+				{{#each highlights}}
+				<li class="list-group-item">{{{.}}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+	</div>
+	{{/each}}
+</section>
+{{/if}}

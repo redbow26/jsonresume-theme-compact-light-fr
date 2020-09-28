@@ -1,0 +1,109 @@
+{{#resume.basics}}
+	<h1>{{name}}</h1>
+	<h2>{{label}}</h2>
+	<section id="basics">
+		<div class="contact">
+		{{#if url}}
+		<div class="website">
+			<strong>Portfolio</strong>
+			<br/>
+			<a href={{url}}>{{url}}</a>
+		</div>
+		{{/if}}
+		{{#if email}}
+		<div class="email">
+			<strong>Email</strong>
+			<br/>
+			{{email}}
+		</div>
+		{{/if}}
+		{{#if phone}}
+		<div class="phone">
+			<strong>Telephone</strong>
+			<br/>
+			{{phone}}
+		</div>
+
+		{{/if}}
+		</div>
+		{{#if summary}}
+		<div class="summary">
+			<p>{{summary}}</p>
+		</div>
+		{{/if}}
+		{{#location}}
+		{{#if sector}}
+			<div class="sector">
+				<strong>Secteur</strong>
+				<br>
+				{{sector}}
+			</div>
+		{{else}}
+		<h3>Location</h3>
+		<section id="location">
+			{{#if address}}
+			<div class="address">
+				<strong>Addresse</strong>
+				<br/>
+				{{address}}
+			</div>
+			{{/if}}
+			{{#if postalCode}}
+			<div class="postalCode">
+				<strong>Code postale</strong>
+				<br/>
+				{{postalCode}}
+			</div>
+			{{/if}}
+			{{#if city}}
+			<div class="city">
+				<strong>Ville</strong>
+				<br/>
+				{{city}}
+			</div>
+			{{/if}}
+			{{#if countryCode}}
+			<div class="countryCode">
+				<strong>Country code</strong>
+				<br/>
+				{{countryCode}}
+			</div>
+			{{/if}}
+			{{#if region}}
+			<div class="region">
+				<strong>Pays</strong>
+				<br/>
+				{{region}}
+			</div>
+			{{/if}}
+		</section>
+		{{/if}}
+		{{/location}}
+		{{#if profiles.length}}
+		<h3>Profiles</h3>
+		<section id="profiles">
+			{{#each profiles}}
+			<div class="item">
+				{{#if network}}
+				<strong class="network">
+					{{#if network}}
+					<i class="{{iconClass}}"></i>
+					{{/if}}
+					{{network}}
+				</strong>
+				{{/if}}
+				{{#if username}}
+				<div class="username">
+					{{#if url}}
+					<a href="{{url}}">{{username}}</a>
+					{{else}}
+					{{username}}
+					{{/if}}
+				</div>
+				{{/if}}
+			</div>
+			{{/each}}
+		</section>
+		{{/if}}
+	</section>
+{{/resume.basics}}

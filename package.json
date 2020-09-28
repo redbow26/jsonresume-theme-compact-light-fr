@@ -1,0 +1,15 @@
+{
+  "name": "jsonresume-theme-compact-dark-fr",
+  "version": "0.1.2",
+  "description": "Compact-dark-fr theme for JSON Resume",
+  "author": "Tristan Leroy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erming/jsonresume-theme-compact-dark-fr"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "lodash": "^4.17.20"
+  }
+}
