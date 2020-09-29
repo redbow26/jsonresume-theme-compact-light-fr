@@ -1,9 +1,9 @@
 {{#if resume.education.length}}
 <section id="education">
-	<h2>Éducation</h2>
+	<h2><i class="fa fa-university ico"></i> Formations</h2>
 	{{#each resume.education}}
 	<div class="item">
-		<div class="border">
+		<div class="details">
 			<div class="date">
 				{{#if startDateYear}}
 				<span class="startDate">
@@ -16,21 +16,19 @@
 				</span>
 				{{/if}}
 			</div>
-		</div>
-		<div class="content">
 			{{#if institution}}
 			<div class="institution">
 				<em>{{institution}}</em>
 			</div>
 			{{/if}}
-			{{#if area}}
-			<div class="area">
-				{{area}}
-			</div>
-			{{/if}}
 			{{#if studyType}}
 			<div class="studyType">
 				{{studyType}}
+			</div>
+			{{/if}}
+			{{#if area}}
+			<div class="area">
+				{{area}}
 			</div>
 			{{/if}}
 			{{#if gpa}}

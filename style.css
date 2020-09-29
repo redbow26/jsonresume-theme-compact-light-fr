@@ -87,14 +87,10 @@ blockquote {
 	text-decoration: none;
 }
 /*
-.col1 -> First column for the flex of the body
-.col2 -> Second column for the flex
+.col -> Column for the flex of the body
 */
-.col1 {
-	width: 54%;
-}
-.col2 {
-	width: 44%;
+.col {
+	width: 50%;
 }
 
 .item {
@@ -173,32 +169,6 @@ blockquote {
 	background-color: var(--dark);
 }
 
-#education .item {
-	display: flex;
-}
-
-
-#education .border {
-  width: 7.3rem;
-  line-height: 1.6;
-  font-weight: 700;
-  display: inline-block;
-  border-right: 3px solid var(--red);
-}
-#education .date {
-	width: 7rem;
-	line-height: 1.6;
-	font-weight: 700;
-	display: inline-block;
-  }
-
-#education .content {
-	margin-left: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 #project .roles {
 	text-align: center;
 }
@@ -208,6 +178,7 @@ blockquote {
 
 #volunteer .details,
 #project .details,
+#education .details,
 #work .details {
 	text-align: center;
 	margin-left: 3%;
@@ -220,17 +191,21 @@ blockquote {
 }
 #volunteer .company,
 #project .company,
+#education .area,
+#education .studyType,
 #work .company {
 	font-size: 1.2em;
 	font-weight: bold;
 }
 #volunteer .date,
 #project .date,
+#education .date,
 #work .date {
 	opacity: 0.7;
 }
 #volunteer .content,
-#work .content {
+#work .content,
+#project .content {
 	margin-left: 5rem;
 }
 #volunteer .position,
@@ -240,6 +215,27 @@ blockquote {
 	font-weight: bold;
 }
 
-h2 {
+#project .item {
+	margin-top: -1rem;
+}
+
+h2,
+.badge {
 	text-align: center;
 }
+
+#work em,
+#volunteer em,
+.roles{
+	margin-left: -5rem;
+}
+
+#photo img{
+	display: block;
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+  }

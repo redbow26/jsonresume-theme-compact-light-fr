@@ -1,15 +1,17 @@
 {{#if resume.projects.length}}
 <section id="project">
-	<h2>Projet</h2>
+	<h2><i class= "fa fa-suitcase ico"></i> Projets</h2>
 	{{#each resume.projects}}
 	<div class="item">
 		<div class="details">
 			{{#if name}}
 			<h3 class="name">
 				{{#if url}}
-					<a href="{{url}}"><span class="fa fa-github"></span></a>
+					<a href="{{url}}"><span class="fa fa-github"></span> {{name}}</a>
+				{{else}}
+					{{name}}
 				{{/if}}
-				{{name}}
+				
 			</h3>
 			{{/if}}
 			<div class="date">
@@ -26,16 +28,16 @@
 			</div>
 		</div>
 		<div class="content">
-			{{#if description}}
-			<div class="summary">
-				<p>{{description}}</p>
-			</div>
-			{{/if}}
 			{{#if roles.length}}
 			<div class="roles">
 				{{#each roles}}
 				<span class="badge">{{.}}</span>
 				{{/each}}
+			</div>
+			{{/if}}
+			{{#if description}}
+			<div class="summary">
+				<p>{{description}}</p>
 			</div>
 			{{/if}}
 			{{#if highlights.length}}

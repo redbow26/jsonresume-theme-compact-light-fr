@@ -162,7 +162,7 @@ function updateResume(resumeObject) {
                     e.endDateMonth = getMonth(e.endDate || "")
 
                     if (e.endDateYear > curyear) {
-                        e.endDateYear += "";
+                        e.endDateYear += " (attendu)";
                     }
                 } else {
                     e.endDateYear = 'Présent'
@@ -230,7 +230,8 @@ function updateResume(resumeObject) {
 
 function render(resume) {
 
-	resume = updateResume(resume);
+    resume = updateResume(resume);
+    console.log(resume)
 
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
 	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
