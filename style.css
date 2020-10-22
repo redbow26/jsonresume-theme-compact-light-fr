@@ -19,11 +19,11 @@
 	--red: #dc3545;
 	--light-grey: var(--gray-500);
 
-	--main-background: var(--dark);
+	--main-background: var(--light);
 	--secondary-background: var(--red);
 
-	--main-text-color: var(--light);
-	--secondary-text-color: var(--dark);
+	--main-text-color: var(--dark);
+	--secondary-text-color: var(--light);
 	--red-text-color: var(--red);
 }
 body {
@@ -32,7 +32,7 @@ body {
 	line-height: 1.4;
 }
 em {
-	color: var(--light-grey);
+	color: var(--dark);
 }
 .side em {
 	color: black;
@@ -184,7 +184,7 @@ blockquote {
 	margin-left: 3%;
 	width: 95%;
 	margin-bottom: 10px;
-	background: var(--gray-700);
+	background: var(--light-grey);
 	border-bottom: 1px solid var(--gray-400);
 	border-right: 1px solid var(--gray-400);
 	border-radius: 10px;
@@ -236,6 +236,5 @@ h2,
 	margin-left: auto;
 	margin-right: auto;
 	width: 150px;
-	height: 150px;
-	border-radius: 50%;
+	border-radius: 45%;
   }

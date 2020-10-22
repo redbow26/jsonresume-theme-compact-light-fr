@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-compact-dark-fr",
+  "name": "jsonresume-theme-compact-light-fr",
   "version": "0.1.2",
-  "description": "Compact-dark-fr theme for JSON Resume",
+  "description": "Compact-light-fr theme for JSON Resume",
   "author": "Tristan Leroy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/redbow26/jsonresume-theme-compact-dark-fr"
+    "url": "https://github.com/redbow26/jsonresume-theme-compact-light-fr"
   },
   "license": "MIT",
   "dependencies": {
